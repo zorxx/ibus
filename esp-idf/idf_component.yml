@@ -1,0 +1,4 @@
+version: "1.0.0"
+description: "Flysky IBUS protocol message parser"
+url: "https://github.com/zorxx/ibus"
+license: "MIT"
