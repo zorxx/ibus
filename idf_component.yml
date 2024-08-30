@@ -1,0 +1,12 @@
+version: "1.0.0"
+description: "Flysky IBUS protocol message parser"
+url: "https://github.com/zorxx/ibus"
+repository: "https://github.com/zorxx/ibus.git"
+license: "MIT"
+tags:
+  - ibus
+  - flysky
+  - remote
+  - servo
+  - communication
+  - telemetry
