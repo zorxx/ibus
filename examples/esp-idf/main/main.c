@@ -21,14 +21,18 @@ static void channel_handler(ibus_channel_t *channels, void *cookie)
 
 /* The following definition may change,
    based on the ESP device and IBUS device wiring. */
-#define ESP_UART UART_NUM_1
+#define IBUS_UART   UART_NUM_1
+#define IBUS_TX_PIN 4
+#define IBUS_RX_PIN 5
 
 void app_main(void)
 {
    ESP_ERROR_CHECK(esp_event_loop_create_default() );
 
    uart_lowlevel_config config;
-   config.port = ESP_UART;
+   config.port = IBUS_UART;
+   config.tx_pin = IBUS_TX_PIN;
+   config.rx_pin = IBUS_RX_PIN;
    ibus_context_t *ctx = ibus_init(&config);
    if(NULL != ctx)
    {
